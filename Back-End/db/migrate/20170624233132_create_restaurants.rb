@@ -6,7 +6,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.1]
       t.string :close
       t.string :name
       t.string :menu, array: true
-
+      t.boolean :featured
       t.timestamps
     end
   end
