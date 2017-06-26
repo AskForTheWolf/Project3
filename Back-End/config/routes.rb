@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-	resources :restaurants, only: [:index, :show]
+	resources :restaurants do
+		resources :order
+	end
 
 	  root to: redirect('/restaurants')
 end

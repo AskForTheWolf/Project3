@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-	before_action :find_post, only: [:show, :index]
+	before_action :find_restaurant, only: [:show, :index]
 
 	def index
 		@restaurants = Restaurant.all
@@ -17,7 +17,7 @@ class RestaurantsController < ApplicationController
 		end
 	end
 
-	def find_post
+	def find_restaurant
 		@restaurant = Restaurant.find(params[:id])
 	end
 
