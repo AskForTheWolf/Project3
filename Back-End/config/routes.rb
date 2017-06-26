@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	resources :restaurant
+	resources :restaurants
 
-	  root to: redirect('/restaurant')
+	  root to: redirect('/restaurants')
 end

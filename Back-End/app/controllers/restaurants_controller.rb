@@ -1,18 +1,20 @@
 class RestaurantsController < ApplicationController
-	before_action : :find_post, only: [:show, :edit, :update, :destroy]
+	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@restaurant = Restaurant.all
+		@restaurants = Restaurant.all
 
-		respond_to do |order|
+		respond_to do | format |
 			format.html { render :index }
-			format.json { render :json @restaurant}
+			format.json { render json: @restaurants}
+		end
 	end
 
 	def show
-		respond_to do |order|
+		respond_to do | format |
 			format.html { render :show }
-			format.json { render :json @restaurant}
+			format.json { render json: @restaurant}
+		end
 	end
 
 	def new
@@ -31,7 +33,6 @@ class RestaurantsController < ApplicationController
 	          format.json { render json: @restaurant.errors, status: :unprocessable_entity }
 	        end
 	      end
-	    end
 	end
 
 	def edit
@@ -44,7 +45,7 @@ class RestaurantsController < ApplicationController
 
 	def destroy
 		@restaurant.destroy
-		redirec_to restaurant_path
+		redirect_to restaurant_path
 	end
 
 	private
