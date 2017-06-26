@@ -47,3 +47,33 @@ div{
   margin-left: 20px;
 
 }
+
+.logo-img {
+  height: 100px;
+}
+
+.row {
+  display: inline-flex;
+}
+
+.link-list {
+  display: inline-flex;
+  list-style: none;
+  float: right;
+  padding-top: 20px;
+}
+
+.link-list li {
+  padding: 10px;
+}
+.link-list li a{
+  color: white;
+}
+.header {
+  background-color: red;
+  margin: 0 auto;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
