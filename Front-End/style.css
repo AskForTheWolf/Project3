@@ -31,8 +31,10 @@ title {
 input[type='radio']{
 transform: scale(2);
 margin: 40px;
+margin-right: 10px;
 
 }
+
 
 /*now I've got a decent text box and radios for input*/
 input[type='text']{
