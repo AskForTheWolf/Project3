@@ -1,0 +1,21 @@
+.tp-header{
+  text-align: center;
+  margin: 30px;
+  font-family: 'Bree Serif', serif;
+  font-size: 140%;
+
+}
+
+title {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    font-size: 130%;
+}
+
+h1{
+  font-size: 150%;
+  font-family: 'Bree Serif', serif;
+  align-self: auto;
+  color: blue;
+  font-style: bold;
+}

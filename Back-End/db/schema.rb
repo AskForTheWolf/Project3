@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170624233132) do
     t.string "close"
     t.string "name"
     t.string "menu", array: true
+    t.boolean "featured"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
