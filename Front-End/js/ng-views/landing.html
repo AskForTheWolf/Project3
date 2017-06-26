@@ -6,7 +6,8 @@
     </section>
     <section>
         <div class="search-options">
-            <input type="text" class="search-bar" id="search-bar">
+          <!-- Added placeholder to add a prompt to the search bar -->
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search for food!">
             <br>
             <input type="radio" class="pickup" id="pickup" name="choice">
             <input type="radio" class="delivery" id="delivery" name="choice">
@@ -17,14 +18,18 @@
             <h1 class="tp-header">Top Restaurants</h1>
             <div data-ng-repeat="feature in vm.featured" data-ng-class="tp-divs">
                 {{feature.name}}
+                <p>SAMPLE TEXT DIV</p>
             </div>
         </div>
         <div>
             <h1 class="lp-header">Local Restaurants</h1>
-            <div class="lp-divs" id="lp-div-1"></div>
-            <div class="lp-divs" id="lp-div-2"></div>
-            <div class="lp-divs" id="lp-div-3"></div>
-            <div class="lp-divs" id="lp-div-4"></div>
+            <div class="lp-divs" id="lp-div-1">SAMPLE TEXT</div>
+            <div class="lp-divs" id="lp-div-2">SAMPLE TEXT</div>
+            <div class="lp-divs" id="lp-div-3">SAMPLE TEXT</div>
+            <div class="lp-divs" id="lp-div-4">SAMPLE TEXT</div>
         </div>
     </section>
+    <div class="footer">This is footer text
+    </div>
 </main>
+<!--Added "SAMPLE TEXT" to divs to help me with styling  -->
