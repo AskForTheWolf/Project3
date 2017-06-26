@@ -14,10 +14,9 @@
     <section>
         <div>
             <h1 class="tp-header">Top Restaurants</h1>
-            <div class="tp-divs" id="tp-div-1"></div>
-            <div class="tp-divs" id="tp-div-2"></div>
-            <div class="tp-divs" id="tp-div-3"></div>
-            <div class="tp-divs" id="tp-div-4"></div>
+            <div data-ng-repeat="feature in vm.featured" data-ng-class="tp-divs">
+                {{feature.name}}
+            </div>
         </div>
         <div>
             <h1 class="lp-header">Local Restaurants</h1>

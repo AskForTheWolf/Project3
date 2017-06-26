@@ -1,9 +1,11 @@
 angular
 .module('delivery-clone', ['ui.router', 'ngResource'])
 .config(['$stateProvider', RouterFunction])
-.controller('DCLandingController',['RestaurantFactory',function(){}])
+.controller('DCLandingController',['RestaurantFactory',function(RestaurantFactory){
+    this.featured = RestaurantFactory.query()
+}])
 .factory('RestaurantFactory', ['$resource', function($resource){
-        return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true}})
+        return $resource('http://localhost:3000/restaurants/:id',{},{'query': {method: 'GET', isArray: true}})
 }])
 function RouterFunction($stateProvider){
     $stateProvider
