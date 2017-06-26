@@ -18,11 +18,14 @@ margin: 40px;
 
 }
 
+/*now I've got a decent text box and radios for input*/
 input[type='text']{
   transform: scale(1.2);
   margin-left: 20px;
+  margin-top: 10px;
 }
 
+/*Changed font, size, color, just to see what looks okay.*/
 h1{
   font-size: 150%;
   font-family: 'Bree Serif', serif;
@@ -41,9 +44,16 @@ div{
   margin: 20px;
 }
 
+/*In the search options container, I've added BG color (something redd-ish, because that
+apparently incites hunger and we're a food app) to see both the container, and layout */
 .search-options{
   text-align: center;
   align-self: center;
   margin-left: 20px;
+  background-color: rgb(195,47,47)
+}
 
+body{
+  background-color: #3CD0D0;
+  opacity: 0.7;
 }
