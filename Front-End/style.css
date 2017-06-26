@@ -89,4 +89,38 @@ Supposedly, it looks nice*/
 body{
   background-color: #3CD0D0;
   opacity: 0.7;
+  padding: 0;
+}
+
+.logo-img {
+  height: 100px;
+}
+
+.row {
+  display: inline-flex;
+}
+
+.link-list {
+  display: inline-flex;
+  list-style: none;
+  float: right;
+  padding-top: 20px;
+}
+
+.link-list li {
+  padding: 10px;
+}
+.link-list li a{
+  color: white;
+}
+.header {
+  background-color: red;
+  position: relative;
+  top: -15px;
+}
+.search-options {
+  margin-top: 150px;
+}
+.search-bar {
+  width: 300px;
 }
