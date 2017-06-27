@@ -11,17 +11,6 @@
   font-size: 140%;
 
 }
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-}
-
 title {
     font-family: 'Bree Serif', serif;
     text-align: center;
@@ -31,7 +20,13 @@ title {
 input[type='radio']{
 transform: scale(2);
 margin: 40px;
+margin-right: 10px;
 
+}
+
+a{
+  color: black;
+  z-index: 10;
 }
 
 /*now I've got a decent text box and radios for input*/
@@ -65,12 +60,6 @@ h1{
 }
 
 
-
-div{
-  margin: 15px;
-
-}
-
 /*In the search options container, I've added BG color (something redd-ish, because that
 apparently incites hunger and we're a food app) to see both the container, and layout */
 .search-options{
@@ -86,5 +75,159 @@ Supposedly, it looks nice*/
 
 body{
   background-color: #3CD0D0;
-  opacity: 0.7;
+  /*padding: -10px;*/
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo-img {
+  height: 100px;
+}
+
+.row {
+  display: inline-flex;
+}
+
+.link-list {
+  display: inline-flex;
+  list-style: none;
+  float: right;
+  padding-top: 30px;
+}
+
+.link-list li {
+  padding: 10px;
+}
+.link-list li a{
+  color: black;
+}
+.header {
+  background-color: rgb(246, 52, 64);
+;
+  position: relative;
+  top: -15px;
+}
+.search-options {
+  margin: 150px 40px 0 40px;
+}
+.search-bar {
+  margin-top: 20px;
+  width: 300px;
+}
+
+
+<<<<<<< HEAD
+/*Gotta add mobile/small res query for little screens.*/
+=======
+
+
+>>>>>>> 06c7d7014ba60230d18335671a515f9054ae6b84
+.link-list li a {
+  color: black;
+}
+.sidebar {
+  background: white;
+}
+.di-main {
+  background: black;
+}
+.footer {
+  padding: 1em;
+  background-color: rgb(246, 52, 64);
+  text-align: center;
+  position: relative;
+  margin-top: -15px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-top: -15px;
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+}
+.index-container {
+  width: 100%;
+  position: relative;
+  top: -15px;
+}
+.idx-aside {
+  width: 20%;
+  float: left;
+  height: 1790px;
+  padding: 20px 20px 0 20px;
+  background: #efefef;
+}
+.idx-main {
+  width: 80%;
+  float: right;
+  display: block;
+  height: 1790px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+.restaurants {
+  width: 90%;
+  height: 150px;
+  background: white;
+  margin: 40px 0 40px 0;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  position: relative;
+}
+.ri-img-div {
+  width: 20%;
+  float: left;
+}
+.ri-info {
+  width: 80%;
+  float: right;
+  height: 100%;
+}
+.ri-header {
+  width: 50%;
+  float: left;
+}
+.ri-rating {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.restaurant-links:hover {
+  text-decoration: none;
+}
+.hours {
+  float: right;
+}
+.ri-description {
+  clear: both;
+}
+
+/*Gotta add mobile/small res query for little screens.*/
+
+@media (max-width: 1000px) {
+  .ri-info {
+    width: 75%;
+  }
+  .restaurants {
+    height: 175px;
+  }
+}
+
+@media (max-width: 921px) {
+  .restaurants {
+    height: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ri-info {
+    width: 70%;
+  }
+
+  .restaurants {
+    height: 225px;
+  }
 }
