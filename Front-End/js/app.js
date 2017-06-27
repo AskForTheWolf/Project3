@@ -9,6 +9,7 @@ angular
 
 .controller('RestaurantIndexController',['RestaurantFactory',function(RestaurantFactory){
     this.restaurants = RestaurantFactory.query()
+    console.log(this.restaurants)
 }])
 .controller('RestaurantShowController',['$stateParams','RestaurantFactory',function($stateParams ,RestaurantFactory){
     this.restaurant = RestaurantFactory.get({id: $stateParams.id })
@@ -18,8 +19,8 @@ angular
 // Below is Controllers for 'Blog'
 
 .controller('BlogIndexController', ['RestaurantFactory', function($RestaurantFactory){
-    this.blog = RestaurantFactory.query({id: $stateParams.id })
-    console.log(this.blog)
+    this.blogs = RestaurantFactory.query()
+    console.log(this.blogs)
 }])
 .controller('BlogShowController', ['$stateParams','RestaurantFactory', function($stateParams, RestaurantFactory){
     this.blog = RestaurantFactory.get({id: $stateParams.id })
@@ -31,20 +32,17 @@ angular
 .controller('OrderIndexController', ['RestaurantFactory', function(RestaurantFactory){
     this.orders = RestaurantFactory.query()
 }])
-.controller('OrderCreateController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.create({
-        restaurant_id: $stateParams.restaurant_id,
-        id: $stateParams.id
-    })
-    console.log(this.order)
-}])
-.controller('OrderNewController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.({
-        restaurant_id: $stateParams.restaurant_id,
-        id: $stateParams.id
-    })
-    console.log(this.order)
-}])
+// .controller('OrderCreateController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
+//     this.order = RestaurantFactory.create({
+//         restaurant_id: $stateParams.restaurant_id,
+//         id: $stateParams.id
+//     })
+//     console.log(this.order)
+// }])
+// .controller('OrderNewController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
+//     this.order = RestaurantFactory.get({restaurant_id: $stateParams.restaurant_id})
+//     console.log(this.order)
+// }])
 .controller('OrderEditController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
     this.order = RestaurantFactory.edit({
         restaurant_id: $stateParams.restaurant_id,
@@ -100,14 +98,44 @@ function RouterFunction($stateProvider){
     })
     .state('OrderIndex', {
         url: '/orders',
-        templateUrl: 'js/ng-views/index-order.html',
+        templateUrl: 'js/ng-views/order-index.html',
         controller: 'OrderIndexController',
+        controllerAs: 'vm'
+    })
+    .state('OrderEdit', {
+        url: '/orders/id',
+        templateUrl: 'js/ng-views/order-edit.html',
+        controller: 'OrdersEditController',
         controllerAs: 'vm'
     })
     .state('OrderShow', {
         url: '/orders/:id',
-        templateUrl: 'js/ng-views/show-order.html',
+        templateUrl: 'js/ng-views/order-show.html',
         controller: 'OrderShowController',
+        controllerAs: 'vm'
+    })
+    .state('OrderUpdate', {
+        url: '/orders/:id',
+        templateUrl: 'js/ng-views/order-update.html',
+        controller: 'OrderUpdateController',
+        controllerAs: 'vm'
+    })
+    .state('OrderDestroy', {
+        url: '/orders/:id',
+        templateUrl: 'js/ng-views/order-destroy.html',
+        controller: 'OrderDestroyController',
+        controllerAs: 'vm'
+    })
+    .state('BlogIndex', {
+        url: '/blogs',
+        templateUrl: 'js/ng-views/blog-index.html',
+        controller: 'BlogIndexController',
+        controllerAs: 'vm'
+    })
+    .state('BlogShow', {
+        url: '/blogs/:id',
+        templateUrl: 'js/ng-views/blog-show.',
+        controller: 'BlogShowController',
         controllerAs: 'vm'
     })
 }
