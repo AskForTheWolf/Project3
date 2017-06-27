@@ -196,11 +196,10 @@ body{
 }
 
 /*Gotta add mobile/small res query for little screens.*/
-<style>
+
 @media (max-width: 1000px) {
   header{
     max-height: inherit;
   }
 
 }
-</style>
