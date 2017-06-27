@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 20170626203540) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "address"
-    t.string "open"
-    t.string "close"
+    t.integer "open"
+    t.integer "close"
     t.string "name"
+    t.decimal "rating"
     t.string "menu", array: true
     t.boolean "featured"
     t.datetime "created_at", null: false
