@@ -116,7 +116,12 @@ body{
 }
 
 
+<<<<<<< HEAD
 /*Gotta add mobile/small res query for little screens.*/
+=======
+
+
+>>>>>>> 06c7d7014ba60230d18335671a515f9054ae6b84
 .link-list li a {
   color: black;
 }
@@ -135,6 +140,11 @@ body{
   right: 0;
   left: 0;
   bottom: 0;
+<<<<<<< HEAD
+=======
+  margin-top: -15px;
+  /*top: -15px;*/
+>>>>>>> 06c7d7014ba60230d18335671a515f9054ae6b84
 }
 .container-fluid {
   padding-left: 0;
@@ -199,6 +209,7 @@ body{
   clear: both;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1000px) {
   .ri-info {
     width: 75%;
