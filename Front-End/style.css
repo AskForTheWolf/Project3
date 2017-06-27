@@ -114,17 +114,7 @@ body{
 }
 
 
-/*Gotta add mobile/small res query for little screens.*/
-<style>
-@media (max-width: 600px) {
-  header{
-    max-height: inherit;
-  }
 
-
-
-}
-</style>
 
 .link-list li a {
   color: black;
@@ -143,7 +133,8 @@ body{
   right: 0;
   left: 0;
   bottom: 0;
-  top: -15px;
+  margin-top: -15px;
+  /*top: -15px;*/
 }
 .container-fluid {
   padding-left: 0;
@@ -204,3 +195,12 @@ body{
   float: right;
 }
 
+/*Gotta add mobile/small res query for little screens.*/
+<style>
+@media (max-width: 1000px) {
+  header{
+    max-height: inherit;
+  }
+
+}
+</style>
