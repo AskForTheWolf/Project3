@@ -59,10 +59,6 @@ h1{
 
 }
 
-div{
-  margin: 15px;
-
-}
 
 /*In the search options container, I've added BG color (something redd-ish, because that
 apparently incites hunger and we're a food app) to see both the container, and layout */
@@ -80,6 +76,7 @@ Supposedly, it looks nice*/
 body{
   background-color: #3CD0D0;
   padding: -10px;
+  min-height: 100%;
 }
 
 .logo-img {
@@ -121,8 +118,9 @@ body{
 <style>
 @media (max-width: 600px) {
   header{
-
+    max-height: inherit;
   }
+
 
 
 }
@@ -189,4 +187,3 @@ body{
   float: right;
   text-align: right;
 }
-
