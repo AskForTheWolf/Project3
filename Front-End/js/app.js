@@ -20,7 +20,7 @@ function RouterFunction($stateProvider){
     })
     .state('dcIndex', {
         url: '/restaurants',
-        templateUrl: 'js/ng-views/desktop-index.html',
+        templateUrl: 'js/ng-views/restaurant-index.html',
         controller: 'DCIndexController',
         controllerAs: 'vm'
     })

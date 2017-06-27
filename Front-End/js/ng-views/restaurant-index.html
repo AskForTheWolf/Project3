@@ -5,9 +5,10 @@
     <main class="idx-main">
         <h1>Restaurants</h1>
         <div data-ng-repeat="restaurant in vm.restaurants">
+        <a href="#" class="restaurant-links">
             <div class="restaurants">
                 <div class="ri-img-div">
-                    <img class="ri-img" src="">
+                    <img class="ri-img" src="http://www.placecage.com/125/125">
                 </div>
                 <div class="ri-info">
                     <div>
@@ -15,12 +16,18 @@
                             <h4>{{restaurant.name}}</h4>
                         </div>
                         <div class="ri-rating">
-                            <h4>{{restaurant.rating}}</h4>
+                            <h4>Rating: {{restaurant.rating}}</h4>
                         </div>
                     </div>
-                    <div class="ri-description"></div>
+                    <div class="ri-description">
+                        <p>{{restaurant.description}}</p>
+                    </div>
+                    <div class="hours">
+                    Hours of Operation: {{restaurant.hours_string}}
+                    </div>
                 </div>
             </div>
+        </a>
         </div>
     </main>
 </div>
