@@ -56,6 +56,11 @@ h1{
   font-family: 'Bree Serif', serif;
   background-color: white;
   font-weight: 200;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 
 }
 
@@ -218,6 +223,10 @@ float: left;
 }
 .ri-description {
   clear: both;
+}
+
+.index-order-info{
+  max-width: 250px;
 }
 
 /*Gotta add mobile/small res query for little screens.*/
