@@ -179,15 +179,17 @@ body{
 }
 
 /*Order styling within the below lines*/
+.order-date {
+  width: 50%;
+}
 
 .order-name, .order-timeEstimate {
 width: 50%;
-
 }
 
 .order-address, .order-phone {
 width: 100%;
-
+float: left;
 }
 
 .ri-img-div {

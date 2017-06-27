@@ -1,30 +1,25 @@
-<h3>Order Details</h3>
-<div>
-    <div>
-        <img src="{{}}">
-        <p class="order-address">
-            {{}}
-        </p>
-    </div>
-    <div>
-        <p>Ordered From</p>
-        <h3>{{}}</h3>
-    </div>
-    <div>
-        <p>Estimated Delivery</p>
-        <h3>{{}}</h3>
-    </div>
-    <div>
-        <a href="#" class="btn btn-default">Reorder</a>
-    </div>
-    <div>
-        <p>Order Info</p>
-        <hr>
-        <div data-ng-repeat>
+<div class=".orderIndex" data-ng-repeat>
+    <div class="row">
+        <div>
             <div>
-                <span class="quantity"></span>
-                <span class="item"></span>
-                <span class="show-item-price"></span>
+                <img src="">
+            </div>
+            <div>
+                <h4>Order Details</h4>
+                <p class="date"></p>
+                <p class="order-name"></p>
+                <p class="order-address"></p>
+                <p class="order-timeEstimate"></p>
+                <div class="items" data-ng-repeat="order in vm.restaurants | filter: {}">
+                    <p> {{Index + 1}}. {{order.}}</p>
+                    <hr>
+                    <span>  </span>
+                </div>
+
+                </div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-default"></a>
             </div>
         </div>
     </div>

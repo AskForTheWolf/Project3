@@ -11,11 +11,15 @@ angular
     this.restaurant = RestaurantFactory.get({id: $stateParams.id})
     console.log(this.restaurant)
 }])
-.controller('OrderIndexController', ['RestaurantFactory', function($stateParams, RestaurantFactory){
+.controller('OrderIndexController', ['RestaurantFactory', function(RestaurantFactory){
     this.orders = RestaurantFactory.query()
 }])
 .controller('OrderShowController', ['RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.get({[id: $stateParams.id]})
+    this.order = RestaurantFactory.get({
+        restaurant_id: $stateParams.restaurant_id,
+        id: $stateParams.id
+    })
+    this.itemDets = [];
     console.log(this.order)
 }])
 .factory('RestaurantFactory', ['$resource', function($resource){
