@@ -24,6 +24,10 @@ margin-right: 10px;
 
 }
 
+a{
+  color: black;
+  z-index: 10;
+}
 
 /*now I've got a decent text box and radios for input*/
 input[type='text']{
@@ -55,6 +59,10 @@ h1{
 
 }
 
+div{
+  margin: 15px;
+
+}
 
 /*In the search options container, I've added BG color (something redd-ish, because that
 apparently incites hunger and we're a food app) to see both the container, and layout */
@@ -93,7 +101,7 @@ body{
   padding: 10px;
 }
 .link-list li a{
-  color: white;
+  color: black;
 }
 .header {
   background-color: red;
@@ -107,6 +115,16 @@ body{
   margin-top: 20px;
   width: 300px;
 }
+
+
+/*Gotta add mobile/small res query for little screens.*/
+<style>
+@media (max-width: 600px) {
+
+
+
+}
+</style>
 
 .link-list li a {
   color: black;
@@ -169,3 +187,4 @@ body{
   float: right;
   text-align: right;
 }
+
