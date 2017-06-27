@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170626203540) do
     t.integer "open"
     t.integer "close"
     t.string "name"
+    t.string "hours_string"
+    t.string "description"
     t.decimal "rating"
     t.string "menu", array: true
     t.boolean "featured"
