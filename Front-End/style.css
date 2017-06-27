@@ -210,6 +210,11 @@ body{
 }
 
 <<<<<<< HEAD
+/*Gotta add mobile/small res query for little screens.*/
+
+=======
+<<<<<<< HEAD
+>>>>>>> 1aa3136186f4a5f02154c90f21652920df32cd17
 @media (max-width: 1000px) {
   .ri-info {
     width: 75%;
