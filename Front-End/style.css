@@ -76,6 +76,7 @@ Supposedly, it looks nice*/
 body{
   background-color: #3CD0D0;
   padding: -10px;
+  min-height: 100%;
 }
 
 .logo-img {
@@ -116,6 +117,9 @@ body{
 /*Gotta add mobile/small res query for little screens.*/
 <style>
 @media (max-width: 600px) {
+  header{
+    max-height: inherit;
+  }
 
 
 
