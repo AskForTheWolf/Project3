@@ -1,15 +1,20 @@
-<div data-ng-repeat>
+<div class=".orderIndex" data-ng-repeat>
     <div class="row">
         <div>
             <div>
                 <img src="">
             </div>
             <div>
-                <h4></h4>
+                <h4>Order Details</h4>
                 <p class="date"></p>
-                <p class="address"></p>
-                <div class="items" data-ng-repeat="order in vm.orders">
-                    <p></p>
+                <p class="order-name"></p>
+                <p class="order-address"></p>
+                <p class="order-timeEstimate"></p>
+                <div class="items" data-ng-repeat="order in vm.restaurants | filter: {}">
+                    <p> {{Index + 1}}. {{order.}}</p>
+                    <hr>
+                </div>
+
                 </div>
             </div>
             <div>

@@ -15,7 +15,7 @@ angular
     this.orders = RestaurantFactory.query()
 }])
 .controller('OrderShowController', ['RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.get([id: $stateParams.id])
+    this.order = RestaurantFactory.get({[id: $stateParams.id]})
     console.log(this.order)
 }])
 .factory('RestaurantFactory', ['$resource', function($resource){
