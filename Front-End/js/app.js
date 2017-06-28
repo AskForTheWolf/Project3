@@ -2,7 +2,8 @@ angular
 .module('delivery-clone', ['ui.router', 'ngResource'])
 .config(['$stateProvider', RouterFunction])
 .controller('RootController',['RestaurantFactory',function(RestaurantFactory){
-    // this.featured = RestaurantFactory.get({featured: true})
+    this.featured = RestaurantFactory.query()
+    console.log(this.featured)
 }])
 
 // Below is Controllers for 'Restaurant'
