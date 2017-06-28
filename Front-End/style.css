@@ -61,7 +61,7 @@ h1{
   min-width: 200px;
   border-radius: 10px;
   margin-bottom: 10px;
-
+  padding: 10px;
 }
 
 
@@ -169,7 +169,7 @@ body{
   padding-right: 0;
   margin: 0 auto;
 }
-.index-container {
+.index-container, .orderIndex {
   width: 100%;
   position: relative;
   top: -15px;
@@ -199,6 +199,21 @@ body{
   border-radius: 10px;
   position: relative;
 }
+
+/*Order styling within the below lines*/
+.order-date {
+  width: 50%;
+}
+
+.order-name, .order-timeEstimate {
+width: 50%;
+}
+
+.order-address, .order-phone {
+width: 100%;
+float: left;
+}
+
 .ri-img-div {
   width: 20%;
   float: left;
@@ -375,7 +390,30 @@ body{
     width: 70%;
   }
 
+  .header col-lg-12{
+    margin: 5px;
+    padding: 0px;
+  }
+
   .restaurants {
     height: 225px;
   }
+}
+
+@media (max-width: 600px) {
+  input[type='text']{
+    transform: scale(.8);
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .index-order-info, .index-search, .index-favorites{
+    max-width: 500;
+    text-align: center;
+    margin-top: 10px;
+
+  }
+  .mbl-index-footer{
+    background-image: url("img_tree.gif"), url("img_flwr.gif"), url("");
+  }
+
 }
