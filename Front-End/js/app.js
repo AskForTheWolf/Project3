@@ -116,13 +116,11 @@ function RouterFunction($stateProvider){
     })
     .state('OrderUpdate', {
         url: '/orders/:id',
-        templateUrl: 'js/ng-views/order-update.html',
         controller: 'OrderUpdateController',
         controllerAs: 'vm'
     })
     .state('OrderDestroy', {
         url: '/orders/:id',
-        templateUrl: 'js/ng-views/order-destroy.html',
         controller: 'OrderDestroyController',
         controllerAs: 'vm'
     })
