@@ -1,13 +1,42 @@
-<header class="show-logo-div ">
-    <img src="" class="show-logo">
-</header>
-<main>
-</main>
-<div class="mbl-index-footer">
 
-
-
-
-
-
-<span class="halflings halflings-send"></span>
+<div class="page-wrapper">
+    <section>
+        <div class="featured-img" style="background-image: url('https://placecage.com/1440/500/')">
+        </div>
+        <div class="break"></div>
+    </section>
+    <main>
+    <div class="page-header text-center">
+        <h1>{{vm.restaurant.name}}</h1>
+    </div>
+        <div class="aside"></div>
+        <div class="page-content">
+            <div class="jumbotron center-block">
+                <h2>Menu</h2>
+                    <div class="item info">
+                        <span class="pull-left">{{vm.restaurant.menu[0].name}}
+                        </span>
+                        <span class="pull-right">{{vm.restaurant.menu[0].price}}</span>
+                    </div>
+            </div>
+        </div>
+    </main>
+</div>
+<!-- <div>
+    <header class="show-logo-div ">
+        <img src="" class="show-logo">
+    </header>
+    <main>
+    </main>
+    <footer class="mbl-index-footer">
+        <div class="index-order-info" id="index-order-info">    <span>
+            <img class="order-info" src="../../../fonts/glyphicons_free/glyphicons/png/glyphicons-40-notes.png"></div>
+            </span>
+            <span>
+            <div class="index-search" id="index-search">
+                <span>
+                    <img class="i-search" src="../../../fonts/glyphicons_free/glyphicons/png/glyphicons-40-notes.png">
+            </div>
+                </span>
+            <div class="index-favorites" id="index-favorites"></div>
+    </footer>
