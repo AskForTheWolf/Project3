@@ -39,7 +39,7 @@ input[type='text']{
 /*Changed font, size, color, just to see what looks okay.*/
 h1{
   font-size: 150%;
-  font-family: 'Bree Serif', serif;
+  font-family: 'Open Sans', sans-serif;
   align-self: auto;
   color: blue;
   font-style: bold;
@@ -130,6 +130,11 @@ body{
 .input-group {
   width: 300px;
 }
+
+.jumbotron {
+  width: 80%;
+}
+
 
 /*.landing-img {
   width: 100%;
@@ -247,6 +252,23 @@ float: left;
   width: 100%;
   height: 46px;
   background-color: rgb(246, 52, 64);
+}
+.page-wrapper {
+  position: relative;
+}
+.aside {
+  width: 20%;
+  position: absolute;
+  left: 0;
+  top: 610px;
+  bottom: -100px;
+  padding: 20px 20px 0 20px;
+  background: #efefef;
+  float: left;
+}
+.page-content {
+  width: 80%;
+  float: right;
 }
 
 /*.share {

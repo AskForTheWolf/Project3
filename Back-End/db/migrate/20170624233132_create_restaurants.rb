@@ -5,6 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.1]
       t.integer :open
       t.integer :close
       t.string :name
+      t.string :pic_url
       t.string :hours_string
       t.string :description
       t.decimal :rating
