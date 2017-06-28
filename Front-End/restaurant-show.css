@@ -1,0 +1,9 @@
+.page-wrapper {
+  min-height:100vh; /*1vh = 1% of browser screen height*/
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+}

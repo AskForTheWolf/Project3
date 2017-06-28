@@ -117,11 +117,14 @@ body{
 }
 
 .landing-img-div {
-    width: 100%;
     background-image: url('../../assets/images/landing-img.jpg');
+}
+.featured-img {
+    width: 100%;
     height: 500px;
     background-position: center;
     background-size: cover;
+    margin-top: -15px;
 }
 
 .input-group {
@@ -245,6 +248,11 @@ float: left;
 .index-order-info{
   max-width: 250px;
 }
+.break {
+  width: 100%;
+  height: 46px;
+  background-color: rgb(246, 52, 64);
+}
 
 /*.share {
   position: relative;
@@ -366,6 +374,7 @@ float: left;
 .share ul li a:hover {
   text-decoration: underline;
 }*/
+
 
 
 /*Gotta add mobile/small res query for little screens.*/

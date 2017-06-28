@@ -81,7 +81,7 @@ function RouterFunction($stateProvider){
     .state('landing', {
         url: '/',
         templateUrl: 'js/ng-views/landing.html',
-        controller: 'DCLandingController',
+        controller: 'RootController',
         controllerAs: 'vm'
     })
     .state('RestaurantIndex', {

@@ -5,7 +5,7 @@
     <main class="idx-main">
         <h1>Restaurants</h1>
         <div data-ng-repeat="restaurant in vm.restaurants">
-        <a href="#" class="restaurant-links">
+        <a data-ui-sref="RestaurantShow({id: restaurant.id})" class="restaurant-links">
             <div class="restaurants">
                 <div class="ri-img-div">
                     <img class="ri-img" src="http://www.placecage.com/125/125">
