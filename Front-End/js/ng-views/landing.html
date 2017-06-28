@@ -1,29 +1,26 @@
 <main>
     <section>
-        <div class="landing-img-div" id="landing-img-div">
-            <img class="landing-img" id="landing-img" src="">
-        </div>
+        <div class="landing-img-div" id="landing-img-div"></div>
     </section>
     <section>
-        <div class="search-options">
+        <div class="search-options" data-toggle="buttons">
           <!-- Added placeholder to add a prompt to the search bar -->
             <input type="text" class="search-bar" id="search-bar" placeholder="Enter your address">
-            <br>
-            <label class="pickup">Pickup
-                <input type="radio" class="pickup" id="pickup">
-            </label>
-            <label class="delivery">
-                <input type="radio" class="delivery" id="delivery"> Delivery
-            </label>
+            <!-- <div class="share">
+                <a href="#">Order Now</a>
+                <div>
+                    <ul>
+                        <li><a href="#">Pickup</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+            </div> -->
         </div>
     </section>
     <section>
         <div>
             <h1 class="tp-header">Top Restaurants</h1>
-            <div data-ng-repeat="feature in vm.featured" data-ng-class="tp-divs">
-                {{feature.name}}
-                <p>SAMPLE TEXT DIV</p>
-            </div>
+
         </div>
         <div>
             <h1 class="lp-header">Local Restaurants</h1>
