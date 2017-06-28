@@ -278,6 +278,14 @@ float: left;
 }
 .blog-img-div {
   background-image: url('../../assets/images/blog.jpg');
+  background-position: 0% 30%;
+}
+
+.blogs {
+  margin: 40px auto 0 30px;
+}
+.blogs .jumbotron {
+  width: 80%;
 }
 
 /*.share {

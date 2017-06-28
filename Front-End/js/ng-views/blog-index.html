@@ -1,5 +1,11 @@
 <main class="wrapper">
     <section>
         <div class="blog-img-div featured-img" id="blog-img-div"></div>
+        {{vm.blogs | json}}
+        <div class="blogs" data-ng-repeat='post in vm.blogs'>
+            <div class="blog-post">
+                {{vm.blogs.collections[$index].collection.title}}
+            </div>
+        </div>
     </section>
 </main>
