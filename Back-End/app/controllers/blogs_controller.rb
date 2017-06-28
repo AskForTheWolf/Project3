@@ -1,11 +1,11 @@
 class BlogsController < ApplicationController
 
 	def index
-		@blog = Blog.all
+		@blog = HTTParty.get('https://developers.zomato.com/api/v2.1/collections?city_id=283&apikey=4dd53daf684b041ec1d002edd2ccfa3e')
 
 		respond_to do | format |
 			format.html { render :index }
-			format.json { render :json }
+			format.json { render :json @blog}
 		end
 	end
 

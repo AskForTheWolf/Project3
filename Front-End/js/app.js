@@ -74,7 +74,9 @@ angular
 }])
 .controller('')
 .factory('RestaurantFactory', ['$resource', function($resource){
-        return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true}})
+        restaurants: return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true},
+        blogs: return $resource('http://localhost:3000/blogs/:id.json',{},{'query': {method: 'GET', isArray: true}
+    })
 }])
 function RouterFunction($stateProvider){
     $stateProvider
