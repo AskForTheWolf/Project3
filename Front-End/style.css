@@ -109,7 +109,6 @@ body{
   background-color: rgb(246, 52, 64);
   position: relative;
   top: -15px;
-  z-index: 11;
 }
 .search-options .search-bar {
   margin-top: 10px;
@@ -449,10 +448,12 @@ vertical-align: top;
   border-left: 2px black solid;
   border-right: 2px black solid;
 }
-.header col-lg-12{
-  margin: 5px;
-  padding: 0px;
+
+.glyphicon {
+  font-size: 45px;
+  padding: 5px 0;
 }
+
 
 /*Gotta add mobile/small res query for little screens.*/
 
