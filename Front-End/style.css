@@ -276,6 +276,9 @@ float: left;
   width: 80%;
   float: right;
 }
+.blog-img-div {
+  background-image: url('../../assets/images/blog.jpg');
+}
 
 /*.share {
   position: relative;

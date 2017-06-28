@@ -18,12 +18,12 @@ angular
 
 // Below is Controllers for 'Blog'
 
-.controller('BlogIndexController', ['RestaurantFactory', function($RestaurantFactory){
-    this.blogs = RestaurantFactory.query()
+.controller('BlogIndexController', ['BlogFactory', function(BlogFactory){
+    this.blogs = BlogFactory.query()
     console.log(this.blogs)
 }])
-.controller('BlogShowController', ['$stateParams','RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.blog = RestaurantFactory.get({id: $stateParams.id })
+.controller('BlogShowController', ['$stateParams','BlogFactory', function($stateParams, BlogFactory){
+    this.blog = BlogFactory.get({id: $stateParams.id })
     console.log(this.blog)
 }])
 
@@ -72,11 +72,11 @@ angular
     })
     console.log(this.order)
 }])
-.controller('')
+.factory('BlogFactory', ['$resource', function($resource){
+    return $resource('http://localhost:3000/blogs/:id.json',{},{'query': {method: 'GET', isArray: false}})
+}])
 .factory('RestaurantFactory', ['$resource', function($resource){
-        restaurants: return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true},
-        blogs: return $resource('http://localhost:3000/blogs/:id.json',{},{'query': {method: 'GET', isArray: true}
-    })
+    return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true}})
 }])
 function RouterFunction($stateProvider){
     $stateProvider
