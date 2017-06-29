@@ -145,6 +145,7 @@ body{
   background-color: rgb(246, 52, 64);
   position: relative;
   top: -15px;
+  z-index: 1;
 }
 .search-options .search-bar {
   margin-top: 10px;
@@ -532,6 +533,9 @@ vertical-align: top;
   font-size: 45px;
   padding: 5px 0;
   color: white;
+}
+.glyphicon:active {
+  color: black;
 }
 .full-width {
   margin-right: 0;
