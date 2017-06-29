@@ -537,6 +537,12 @@ vertical-align: top;
   .restaurants {
     height: 200px;
   }
+  h3{
+    margin: 2px;
+  }
+  p{
+    margin: 2px;
+  }
 }
 
 @media (max-width: 800px) {
