@@ -275,7 +275,10 @@ float: left;
   float: left;
 }
 .ri-img {
+  margin-top: 20px;
   border-radius: 5px;
+  width: 125px;
+  height: 125px;
 }
 .ri-info {
   width: 80%;
