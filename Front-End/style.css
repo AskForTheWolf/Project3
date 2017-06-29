@@ -230,7 +230,7 @@ div.footer{
 .idx-aside {
   width: 20%;
   float: left;
-  height: 1790px;
+  height: 2000px;
   padding: 20px 20px 0 20px;
   background: #efefef;
 }
@@ -781,6 +781,7 @@ box-shadow: 0 0 1px 0 #E4E4E4;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 padding: 1em;
+padding-left: 2em;
 -webkit-transition: all 250ms ease;
 -moz-transition: all 250ms ease;
 -ms-transition: all 250ms ease;
@@ -871,16 +872,6 @@ box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
 margin-top: 22px;
 margin-left: 2px;
 margin-bottom: 0px;
-}
-
-#contact_name{
-  margin-left:20px;
-}
-#contact_address{
-  margin-left:20px;
-}
-#contact_phone{
-  margin-left:20px;
 }
 
 @media (max-width: 500px){
