@@ -619,6 +619,43 @@ vertical-align: top;
 
   }
 
+  @media (max-width: 650px) {
+      .ri-info{
+        font-size: 70%;
+
+      }
+      .restaurants{
+        height: 400px;
+      }
+      .ng-binding{
+        height: 200%;
+        margin: 1px;
+        float: right;
+        width: 90%;
+      }
+      p{
+        font-size: 13px;
+      }
+      h3{
+        font-size: 14px;
+        z-index: 11;
+      }
+      h4{
+        font-size: 14px;
+      }
+      .ri-img{
+        transform: scale(.8);
+        margin: 0px;
+        align-self: left;
+      }
+      .ri-description{
+        font-size: 22px;
+      }
+      .ri-rating{
+        margin: 1px;
+      }
+  }
+
 
   /*.index-order-info, .index-search, .index-favorites{
     max-width: 500;
