@@ -145,6 +145,7 @@ body{
   background-color: rgb(246, 52, 64);
   position: relative;
   top: -15px;
+  z-index: 1;
 }
 .search-options .search-bar {
   margin-top: 10px;
@@ -533,6 +534,9 @@ vertical-align: top;
   padding: 5px 0;
   color: white;
 }
+.glyphicon:active {
+  color: black;
+}
 .full-width {
   margin-right: 0;
 }
@@ -647,6 +651,9 @@ width: 500px;
 margin:2em auto;
 background:white;
 position: relative;
+margin-top: 20px;
+top: 100px;
+border: 2px black solid;
 }
 #contact::after {
 content: "";
@@ -665,16 +672,17 @@ z-index: -1;
   padding: 1em;
 }
 #contact h1 {
-background: #F2385A;
+background: rgb(246, 52, 64);
 font-family: Oswald ,sans-serif;
 font-size: 1.75em;
 padding: 0.6em 0 0.6em 0.4em;
 color: white;
 text-shadow: 0 0.06em 0 #424242;
 position: relative;
+top: -20px;
 }
 .contactbutton {
-background: #F2385A;
+background: rgb(246, 52, 64);
 -webkit-box-shadow: 1px 1px 0 0 #832032,2px 2px 0 0 #832032,3px 3px 0 0 #832032;
 box-shadow: 1px 1px 0 0 #832032,2px 2px 0 0 #832032,3px 3px 0 0 #832032;
 text-align: center;
@@ -792,7 +800,7 @@ position: absolute;
 left: 0;
 top: 0;
 height: 100%;
-background: #F2385A;
+background: rgb(246, 52, 64);
 color: white;
 font-family: Oswald ,sans-serif;
 box-sizing: border-box;
@@ -843,7 +851,7 @@ height: 50px;
 margin-top: 1em;
 margin-bottom: 6px;
 cursor: pointer;
-background: #F2385A;
+background: rgb(246, 52, 64);
 color: white;
 font-family: Oswald ,sans-serif;
 font-size: 1em;
@@ -863,6 +871,16 @@ box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
 margin-top: 22px;
 margin-left: 2px;
 margin-bottom: 0px;
+}
+
+#contact_name{
+  margin-left:20px;
+}
+#contact_address{
+  margin-left:20px;
+}
+#contact_phone{
+  margin-left:20px;
 }
 
 @media (max-width: 500px){
