@@ -9,13 +9,4 @@ class BlogsController < ApplicationController
 			format.json { render json: @blog}
 		end
 	end
-
-	def show
-		@blog = Blog.find(params[:id])
-
-		respond_to do | format |
-			format.html { render :show }
-			format.json { render json: @blog }
-		end
-	end
 end
