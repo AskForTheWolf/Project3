@@ -555,10 +555,46 @@ vertical-align: top;
 }
 
 
+/*When the screen is really small, fix bunching issues*/
+@media (max-width: 500px) {
+  .footer{
+    display: inline-block;
 
-@media (max-width: 600px) {
+  }
+  .footer-div:nth-of-type(2){
+    border-left: 0px black solid;
+    border-right: 0px black solid;
+  }
 
-}
+  .glyphicon {
+    font-size: 20px;
+    padding: 1px 0;
+    color: white;
+  }
+  .ri-info {
+    width: 50%;
+  }
+
+    .header col-lg-12{
+      margin: 2px;
+      padding: 0px;
+    }
+
+    .restaurants {
+      height: 200px;
+    }
+    h3{
+      font-size: 90%;
+      margin: 1px;
+    }
+    p{
+      margin: 1px;
+      font-size: 50%;
+    }
+
+  }
+
+
   /*.index-order-info, .index-search, .index-favorites{
     max-width: 500;
     text-align: center;
