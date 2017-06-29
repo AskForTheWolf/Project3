@@ -201,7 +201,7 @@ body{
   padding: 1em;
   background-color: rgb(246, 52, 64);
   /*text-align: center;*/
-  position: relative;
+  position: fixed;
   margin-top: -15px;
   right: 0;
   left: 0;
@@ -209,6 +209,8 @@ body{
   vertical-align: top;
   display: flex;
   padding: 0;
+  margin-right: 0;
+  z-index: 100;
 
 }
 div.footer{
@@ -531,7 +533,9 @@ vertical-align: top;
   padding: 5px 0;
   color: white;
 }
-
+.full-width {
+  margin-right: 0;
+}
 
 /*Gotta add mobile/small res query for little screens.*/
 
