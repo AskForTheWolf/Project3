@@ -16,11 +16,10 @@
         <div class="page-content">
             <div class="jumbotron center-block">
                 <h2>Menu</h2>
-                    <div class="item_info">
-                        <span class="pull-left">{{vm.restaurant.menu_item[0]}} -
+                    <div class="item info">
+                        <span class="pull-left">{{vm.restaurant.menu[0].name}}
                         </span>
-                        <span>{{vm.restaurant.menu_description[0]}}</span>
-                        <span class="pull-right">${{vm.restaurant.menu_price[0]}}</span>
+                        <span class="pull-right">{{vm.restaurant.menu[0].price}}</span>
                     </div>
             </div>
         </div>
