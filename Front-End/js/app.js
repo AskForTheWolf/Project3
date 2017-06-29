@@ -2,7 +2,8 @@ angular
 .module('delivery-clone', ['ui.router', 'ngResource'])
 .config(['$stateProvider', RouterFunction])
 .controller('RootController',['RestaurantFactory',function(RestaurantFactory){
-    // this.featured = RestaurantFactory.get({featured: true})
+    this.featured = RestaurantFactory.query()
+    console.log(this.featured)
 }])
 
 // Below is Controllers for 'Restaurant'
@@ -19,14 +20,14 @@ angular
 // Below is Controllers for 'Blog'
 
 .controller('BlogIndexController', ['BlogFactory', function(BlogFactory){
-    this.blogs = BlogFactory.query()
-    console.log(this.blogs)
+    this.blogs = BlogFactory.query();
+    $.getJSON('http://localhost:3000/blogs.json', function(data){
+        const posts = data;
+        for(let i = 0; i < data.collections.length; i++) {
+            $('#blogs').append(`<div class="row"><a href="${data.collections[i].collection.url}"><div class="col-lg-12 blog-post"><h2>${data.collections[i].collection.title}</h2><img class="blog-img" src="${data.collections[i].collection.image_url}"><h4>${data.collections[i].collection.description}</h4></div></a></div>`)
+        }
+    })
 }])
-.controller('BlogShowController', ['$stateParams','BlogFactory', function($stateParams, BlogFactory){
-    this.blog = BlogFactory.get({id: $stateParams.id })
-    console.log(this.blog)
-}])
-
 // Below is Controllers for 'Order'
 
 .controller('OrderIndexController', ['RestaurantFactory', function(RestaurantFactory){
@@ -139,12 +140,6 @@ function RouterFunction($stateProvider){
         url: '/blogs',
         templateUrl: 'js/ng-views/blog-index.html',
         controller: 'BlogIndexController',
-        controllerAs: 'vm'
-    })
-    .state('BlogShow', {
-        url: '/blogs/:id',
-        templateUrl: 'js/ng-views/blog-show.',
-        controller: 'BlogShowController',
         controllerAs: 'vm'
     })
 }

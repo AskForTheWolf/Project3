@@ -6,9 +6,9 @@
 
 .tp-header{
   text-align: center;
-  margin: 30px;
+  margin: 20px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 140%;
+  font-size: 40px;
   font-weight: 500;
 
 }
@@ -29,6 +29,9 @@ a{
   color: black;
   z-index: 10;
 }
+a:hover {
+  text-decoration: none;
+}
 
 /*now I've got a decent text box and radios for input*/
 input[type='text']{
@@ -42,7 +45,6 @@ h1{
   font-size: 150%;
   font-family: 'Open Sans', sans-serif;
   align-self: auto;
-  color: blue;
   font-style: bold;
   font-weight: 200;
 }
@@ -57,12 +59,31 @@ h1{
   font-family: 'Bree Serif', serif;
   background-color: white;
   font-weight: 200;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   min-width: 200px;
   border-radius: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 90px;
+}
+
+.tp-divs {
+  height: 225px;
+  font-size: 20px;
+  width: 225px;
+  text-align: center;
+  border: 2px solid rgb(246, 52, 64);
+  border-radius: 10px;
+}
+
+.tp-divs:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.ratings{
+  position: absolute;
+  bottom: 5px;
+  right: 63px;
 }
 
 
@@ -110,14 +131,15 @@ body{
   padding: 10px 20px 5px 20px;
 }
 .link-list li a{
-  color: black;
-  border-bottom: 3px black solid;
+  color: white;
+  border-bottom: 3px white solid;
+  text-decoration: none;
 }
 
 .link-list li a:hover{
   text-decoration: none;
-  color: white;
-  border-bottom: 3px white solid;
+  color: black;
+  border-bottom: 3px black solid;
 }
 .header {
   background-color: rgb(246, 52, 64);
@@ -147,9 +169,20 @@ body{
 
 .jumbotron {
   width: 80%;
+  font-size: 20px;
+}
+.item_info {
+  margin-top: 25px;
+  border: 2px rgb(246, 52, 64) solid;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-
+.item_info:hover {
+  border: 2px black solid;
+  cursor: pointer;
+  font-weight: 900;
+}
 /*.landing-img {
   width: 100%;
   position: relative;
@@ -158,12 +191,6 @@ body{
   back
 
 }*/
-
-
-
-.link-list li a {
-  color: black;
-}
 .sidebar {
   background: white;
 }
@@ -174,7 +201,7 @@ body{
   padding: 1em;
   background-color: rgb(246, 52, 64);
   /*text-align: center;*/
-  position: relative;
+  position: fixed;
   margin-top: -15px;
   right: 0;
   left: 0;
@@ -182,6 +209,8 @@ body{
   vertical-align: top;
   display: flex;
   padding: 0;
+  margin-right: 0;
+  z-index: 100;
 
 }
 div.footer{
@@ -214,13 +243,19 @@ div.footer{
 }
 .restaurants {
   width: 90%;
-  height: 150px;
+  height: 175px;
   background: white;
   margin: 40px 0 40px 0;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   border-radius: 10px;
   position: relative;
+  border: 2px rgb(246, 52, 64) solid;
+
+}
+.restaurants:hover {
+  border: 2px black solid;
+  font-weight: 900;
 }
 
 /*Order styling within the below lines*/
@@ -240,6 +275,12 @@ float: left;
 .ri-img-div {
   width: 20%;
   float: left;
+}
+.ri-img {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 125px;
+  height: 125px;
 }
 .ri-info {
   width: 80%;
@@ -263,6 +304,7 @@ float: left;
 }
 .ri-description {
   clear: both;
+  font-size: 16px;
 }
 
 .index-order-info{
@@ -275,6 +317,9 @@ float: left;
 }
 .page-wrapper {
   position: relative;
+}
+.wrapper {
+  margin-bottom: 20px;
 }
 .aside {
   width: 20%;
@@ -296,10 +341,30 @@ float: left;
 }
 
 .blogs {
-  margin: 40px auto 0 30px;
+  margin: 40px auto 0 auto;
 }
 .blogs .jumbotron {
   width: 80%;
+}
+.blog-post {
+  width: 85%;
+  height: 300px;
+  border: 2px rgb(246, 52, 64) solid;
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+}
+
+.blog-post:hover {
+    border: 2px black solid;
+
+}
+.blogs .row {
+  display: block;
+}
+.blog-img {
+  width: 250px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 /*.share {
@@ -466,8 +531,11 @@ vertical-align: top;
 .glyphicon {
   font-size: 45px;
   padding: 5px 0;
+  color: white;
 }
-
+.full-width {
+  margin-right: 0;
+}
 
 /*Gotta add mobile/small res query for little screens.*/
 
@@ -483,6 +551,12 @@ vertical-align: top;
 @media (max-width: 921px) {
   .restaurants {
     height: 200px;
+  }
+  h3{
+    margin: 2px;
+  }
+  p{
+    margin: 2px;
   }
 }
 
@@ -502,14 +576,46 @@ vertical-align: top;
 }
 
 
+/*When the screen is really small, fix bunching issues*/
+@media (max-width: 500px) {
+  .footer{
+    display: inline-block;
 
-@media (max-width: 600px) {
-  input[type='text']{
-    transform: scale(.8);
-    margin-left: 10px;
-    margin-top: 5px;
   }
-}
+  .footer-div:nth-of-type(2){
+    border-left: 0px black solid;
+    border-right: 0px black solid;
+  }
+
+  .glyphicon {
+    font-size: 20px;
+    padding: 1px 0;
+    color: white;
+  }
+  .ri-info {
+    width: 50%;
+  }
+
+    .header col-lg-12{
+      margin: 2px;
+      padding: 0px;
+    }
+
+    .restaurants {
+      height: 200px;
+    }
+    h3{
+      font-size: 90%;
+      margin: 1px;
+    }
+    p{
+      margin: 1px;
+      font-size: 50%;
+    }
+
+  }
+
+
   /*.index-order-info, .index-search, .index-favorites{
     max-width: 500;
     text-align: center;
