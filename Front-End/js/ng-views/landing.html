@@ -9,11 +9,15 @@
         </div>
         <div class="container text-center">
             <div class="lp-divs row" data-ng-repeat="feature in vm.featured | filter: {featured: true}">
+            <a data-ui-sref='RestaurantShow({id: feature.id})'>
                 <div class="col-md-3 center-block tp-divs">
                     <p>{{feature.name}}</p>
+                    <p>{{feature.hours_string}}</p>
+                    <img src="https://placecage.com/100/100">
+                    <p class="ratings">Rating: {{feature.rating}}</p>
                 </div>
+            </a>
             </div>
-
         </div>
     </section>
 </main>

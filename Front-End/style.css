@@ -56,19 +56,31 @@ h1{
   font-family: 'Bree Serif', serif;
   background-color: white;
   font-weight: 200;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   min-width: 200px;
   border-radius: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 90px;
 }
 
 .tp-divs {
-  height: 100px;
+  height: 225px;
   font-size: 20px;
-  width: 150px;
+  width: 225px;
   text-align: center;
+  border: 2px solid rgb(246, 52, 64);
+  border-radius: 10px;
+}
+
+.tp-divs:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.ratings{
+  position: absolute;
+  bottom: 5px;
+  right: 63px;
 }
 
 
@@ -118,6 +130,7 @@ body{
 .link-list li a{
   color: white;
   border-bottom: 3px white solid;
+  text-decoration: none;
 }
 
 .link-list li a:hover{
@@ -153,9 +166,20 @@ body{
 
 .jumbotron {
   width: 80%;
+  font-size: 20px;
+}
+.item_info {
+  margin-top: 25px;
+  border: 2px rgb(246, 52, 64) solid;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-
+.item_info:hover {
+  border: 2px black solid;
+  cursor: pointer;
+  font-weight: 900;
+}
 /*.landing-img {
   width: 100%;
   position: relative;
@@ -214,13 +238,19 @@ div.footer{
 }
 .restaurants {
   width: 90%;
-  height: 150px;
+  height: 175px;
   background: white;
   margin: 40px 0 40px 0;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   border-radius: 10px;
   position: relative;
+  border: 2px rgb(246, 52, 64) solid;
+
+}
+.restaurants:hover {
+  border: 2px black solid;
+  font-weight: 900;
 }
 
 /*Order styling within the below lines*/
@@ -240,6 +270,9 @@ float: left;
 .ri-img-div {
   width: 20%;
   float: left;
+}
+.ri-img {
+  border-radius: 5px;
 }
 .ri-info {
   width: 80%;
@@ -263,6 +296,7 @@ float: left;
 }
 .ri-description {
   clear: both;
+  font-size: 16px;
 }
 
 .index-order-info{
@@ -275,6 +309,9 @@ float: left;
 }
 .page-wrapper {
   position: relative;
+}
+.wrapper {
+  margin-bottom: 20px;
 }
 .aside {
   width: 20%;
@@ -296,10 +333,25 @@ float: left;
 }
 
 .blogs {
-  margin: 40px auto 0 30px;
+  margin: 40px auto 0 auto;
 }
 .blogs .jumbotron {
   width: 80%;
+}
+.blog-post {
+  width: 85%;
+  height: 300px;
+  border: 2px rgb(246, 52, 64) solid;
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+}
+.blogs .row {
+  display: block;
+}
+.blog-img {
+  width: 250px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 /*.share {
@@ -505,11 +557,7 @@ vertical-align: top;
 
 
 @media (max-width: 600px) {
-  input[type='text']{
-    transform: scale(.8);
-    margin-left: 10px;
-    margin-top: 5px;
-  }
+
 }
   /*.index-order-info, .index-search, .index-favorites{
     max-width: 500;
