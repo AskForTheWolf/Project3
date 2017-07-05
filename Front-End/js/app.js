@@ -30,8 +30,8 @@ angular
 }])
 // Below is Controllers for 'Order'
 
-.controller('OrderIndexController', ['RestaurantFactory', function(RestaurantFactory){
-    this.orders = RestaurantFactory.query()
+.controller('OrderIndexController', ['OrderFactory', function(OrderFactory){
+    this.orders = OrderFactory.query()
 }])
 // .controller('OrderCreateController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
 //     this.order = RestaurantFactory.create({
@@ -40,37 +40,37 @@ angular
 //     })
 //     console.log(this.order)
 // }])
-.controller('OrderNewController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.get({
+.controller('OrderNewController', ['$stateParams', 'OrderFactory', function($stateParams, OrderFactory){
+    this.order = OrderFactory.get({
         restaurant_id: $stateParams.restaurant_id,
         id: $stateParams.id
     })
     console.log(this.order)
 }])
-.controller('OrderEditController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.edit({
+.controller('OrderEditController', ['$stateParams', 'OrderFactory', function($stateParams, OrderFactory){
+    this.order = OrderFactory.edit({
         restaurant_id: $stateParams.restaurant_id,
         id: $stateParams.id
     })
     console.log(this.order)
 }])
-.controller('OrderShowController', ['$stateParams','RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.get({
+.controller('OrderShowController', ['$stateParams','OrderFactory', function($stateParams, OrderFactory){
+    this.order = OrderFactory.get({
         restaurant_id: $stateParams.restaurant_id,
         id: $stateParams.id
     })
     this.itemDets = [];
     console.log(this.order)
 }])
-.controller('OrderUpdateController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.update({
+.controller('OrderUpdateController', ['$stateParams', 'OrderFactory', function($stateParams, OrderFactory){
+    this.order = OrderFactory.update({
         restaurant_id: $stateParams.restaurant_id,
         id: $stateParams.id
     })
     console.log(this.order)
 }])
-.controller('OrderDestroyController', ['$stateParams', 'RestaurantFactory', function($stateParams, RestaurantFactory){
-    this.order = RestaurantFactory.destroy({
+.controller('OrderDestroyController', ['$stateParams', 'OrderFactory', function($stateParams, OrderFactory){
+    this.order = OrderFactory.destroy({
         restaurant_id: $stateParams.restaurant_id,
         id: $stateParams.id
     })
@@ -81,6 +81,9 @@ angular
 }])
 .factory('RestaurantFactory', ['$resource', function($resource){
     return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true}})
+}])
+.factory('OrderFactory', ['$resource', function($resource){
+    return $resource('http://localhost:3000/order/:id.json',{},{'query': {method: 'GET', isArray: true}})
 }])
 function RouterFunction($stateProvider){
     $stateProvider
