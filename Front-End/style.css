@@ -107,9 +107,10 @@ body{
 }
 
 .logo-img {
-  height: 100px;
+  height: 110px;
   position: relative;
   left: 20px;
+  margin-top: 5px;
 }
 
 .row {
@@ -169,7 +170,7 @@ body{
 }
 
 .jumbotron {
-  width: 80%;
+  width: 100%;
   font-size: 20px;
 }
 .item_info {
@@ -230,7 +231,7 @@ div.footer{
 .idx-aside {
   width: 20%;
   float: left;
-  height: 1790px;
+  height: 2000px;
   padding: 20px 20px 0 20px;
   background: #efefef;
 }
@@ -334,13 +335,15 @@ float: left;
 }
 .page-content {
   width: 80%;
-  float: right;
 }
 .blog-img-div {
   background-image: url('../../assets/images/blog.jpg');
   background-position: 0% 30%;
 }
-
+.land-rest-img {
+  width: 100px;
+  height: 100px;
+}
 .blogs {
   margin: 40px auto 0 auto;
 }
@@ -619,6 +622,43 @@ vertical-align: top;
 
   }
 
+  @media (max-width: 650px) {
+      .ri-info{
+        font-size: 70%;
+
+      }
+      .restaurants{
+        height: 400px;
+      }
+      .ng-binding{
+        height: 200%;
+        margin: 1px;
+        float: right;
+        width: 90%;
+      }
+      p{
+        font-size: 13px;
+      }
+      h3{
+        font-size: 14px;
+        z-index: 11;
+      }
+      h4{
+        font-size: 14px;
+      }
+      .ri-img{
+        transform: scale(.8);
+        margin: 0px;
+        align-self: left;
+      }
+      .ri-description{
+        font-size: 22px;
+      }
+      .ri-rating{
+        margin: 1px;
+      }
+  }
+
 
   /*.index-order-info, .index-search, .index-favorites{
     max-width: 500;
@@ -781,6 +821,7 @@ box-shadow: 0 0 1px 0 #E4E4E4;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 padding: 1em;
+padding-left: 2em;
 -webkit-transition: all 250ms ease;
 -moz-transition: all 250ms ease;
 -ms-transition: all 250ms ease;
@@ -871,16 +912,6 @@ box-shadow: 1px 1px 0 0 #832032,0px 0px 0 0 #832032,0px 0px 0 0 #832032;
 margin-top: 22px;
 margin-left: 2px;
 margin-bottom: 0px;
-}
-
-#contact_name{
-  margin-left:20px;
-}
-#contact_address{
-  margin-left:20px;
-}
-#contact_phone{
-  margin-left:20px;
 }
 
 @media (max-width: 500px){

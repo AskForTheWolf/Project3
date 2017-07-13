@@ -1,18 +1,16 @@
 # Project3
+It is the third project
 
-This project is based on a application intended to be the service acting as a "middleman" for connecting the users, clients, and the business together.
+BAO/CURRY/ROB LOWE (the less famous one)
 
-The application will allow any person to choose a restaurant and food item of their choice, place an order, see ratings, choose choice of delivery or pickup per order.
+In the beginning, we all collaborated on the design/framing of our project.  We decided on a couple approaches and streamlined our ideas on what the app should look like, which pages would handle what, and how to display/store/request info.
 
-Here we used Ruby On Rails for the back-end and Angular.js.
+From there we deligated what would be the majority of the workload.
 
-We configured the API configurations and the controller/model setup in the Ruby On Rails.
+Curry would be handling CSS/design, while lending a hand to whatever needed attention in Angular/Ruby, later completing seed info for the DB.
 
-We used all the Angular files for the multitude of pages and actions.
+Bao would be focusing more on Angular and Ruby
 
-API: We used "Zomato" as our API for information with over 1.5 million restaurants and over 10,000 cities globally to help with our application.
+Rob would put most of his attention on Ruby and Angular.
 
-Design:
-
-Design wise, we chose to make 3 button structure for the botton of the screen for comfort when our userbase is navigating our app. We think this will be a essential part expecially when attempting to achieve a use for the site on mobile platforms. 
-
+The design and implementation process took a bit, but we eventually landed on what everything should do and how to handle it.
