@@ -1,9 +1,12 @@
 class OrdersController < ApplicationController
+	# respond_to is unnecessary here in this controller. cf blogs_controller comments
+
+	# in `routes.rb`, `resources :order, only: [:index]` other methods are not being used here.
+
 	before_action :find_restaurant, only: [:show, :new, :create, :edit, :update, :destroy]
 	before_action :find_order, only: [:show, :edit, :update, :destroy]
 	def index
 		@restaurants = Restaurant.find(params[:restaurant_id])
-
 		respond_to do | format |
 			format.html { render :index }
 			format.json { render json: @orders}
@@ -41,7 +44,7 @@ class OrdersController < ApplicationController
 
 	def edit
 	end
-		
+
 	def update
 		@order.update!(order_params)
 		redirect_to [@restaurant, @order]

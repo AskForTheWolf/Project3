@@ -1,4 +1,6 @@
 .page-wrapper {
+  /* should be used with the viewport meta tag*/
+  /* https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag */
   min-height:100vh; /*1vh = 1% of browser screen height*/
 }
 

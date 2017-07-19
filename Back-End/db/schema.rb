@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170627162411) do
 
   create_table "orders", force: :cascade do |t|
     t.string "order_number"
-    t.string "customer_name"
+    t.string "customer_name" # should probably be a user account
     t.integer "time_estimate"
     t.string "contact_number"
     t.integer "price"
