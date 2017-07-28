@@ -1,0 +1,35 @@
+Started GET "/" for 127.0.0.1 at 2017-07-24 18:06:11 -0400
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/restaurants" for 127.0.0.1 at 2017-07-24 18:06:12 -0400
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (4.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 560ms (Views: 533.1ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-07-24 18:06:21 -0400
+Processing by RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-07-24 18:09:31 -0400
+Processing by RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-07-24 18:09:50 -0400
+Processing by RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-07-27 10:49:44 -0400
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (3.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 61ms (Views: 21.1ms | ActiveRecord: 12.8ms)
+
+
