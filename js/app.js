@@ -77,10 +77,10 @@ angular
     console.log(this.order)
 }])
 .factory('BlogFactory', ['$resource', function($resource){
-    return $resource('http://localhost:3000/blogs/:id.json',{},{'query': {method: 'GET', isArray: false}})
+    return $resource('https://app-hangry.herokuapp.com/blogs/:id.json',{},{'query': {method: 'GET', isArray: false}})
 }])
 .factory('RestaurantFactory', ['$resource', function($resource){
-    return $resource('http://localhost:3000/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true}})
+    return $resource('https://app-hangry.herokuapp.com/restaurants/:id.json',{},{'query': {method: 'GET', isArray: true}})
 }])
 .factory('OrderFactory', ['$resource', function($resource){
     return $resource('http://localhost:3000/order/:id.json',{},{'query': {method: 'GET', isArray: true}})
