@@ -12,7 +12,7 @@ module BackEnd
     config.load_defaults 5.1
 
     config.action_dispatch.default_headers = {
-    'Access-Control-Allow-Origin' => 'https://baopham92.github.io/hangry',
+    'Access-Control-Allow-Origin' => 'https://baopham92.github.io',
     'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
     }
 
